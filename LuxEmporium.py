@@ -115,7 +115,7 @@ class LuxuryProduct(ProductCategory):
         luxury_products_list = []
 
         with open(
-            r"C:\Users\lenovo\OneDrive\Documents\Codes - VSCode\practice_codes\OOPs Codes\Retail\product_data.csv",
+            "product_data.csv",
             "r",
             newline="",
         ) as f:
