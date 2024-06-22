@@ -1,65 +1,32 @@
-# Inventory Management System for LuxEmporium - A High-End Lifestyle Retailer
+# Inventory Management System for Posh Palette - A High-End Lifestyle Retailer
 
 ### Introduction: 
 
-As a stakeholder at LuxEmporium, a prestigious lifestyle retailer known for its exclusive range of products, we are facing challenges in managing 
-our diverse inventory efficiently. The need for an advanced Inventory Management System has become imperative to maintain the high standards of our brand and provide an exceptional shopping experience to our customers.
+As a stakeholder at Posh Palette, a prestigious lifestyle retailer known for its exclusive range of products, we are facing challenges in managing 
+our diverse inventory efficiently. The objective of this project was to implement an effective inventory management system and perform comprehensive data analysis using SQL for Posh Palette's diverse range of fashion products, aiming to reduce holding costs, prevent stockouts, and maximize revenue without losing customers. The need for an advanced Inventory Management System has become imperative to maintain the high standards of our brand and provide an exceptional shopping experience to our customers.
 
 -- Products in the Inventory:
 
-LuxEmporium deals with a wide range of luxury products, including fashion apparel, accessories, electronic gadgets, and home decor items. Each
-product belongs to a specific category, such as "Fashion," "Electronics," or "Home Decor." Additionally, certain products may be part of 
-limited-edition collections, warranting special attention and handling.
-
-### Features and Requirements:
-
-1. Inheritance:
-
-Implement a class hierarchy that captures the essence of luxury retail. For example, create base classes like LuxuryProduct and ProductCategory 
-and derive specific product and category classes from them.
-Utilize inheritance to encapsulate common attributes and behaviors among luxury products and categories.
-
-2. Encapsulation:
-
-Ensure strict encapsulation of sensitive information related to luxury products, such as pricing strategies, supplier details, and limited-edition
-status.
-Utilize private attributes to protect critical data, allowing controlled access through well-defined methods.
-
-3. Polymorphism:
-
-Implement polymorphism to handle variations in luxury product behaviors. For instance, a method like calculate_discount() could exhibit 
-polymorphic behavior, providing different discount calculations based on the luxury product type.
-Allow for polymorphic behavior when updating stock levels, considering that limited-edition items may have unique restocking procedures.
-
-4. Additional Concepts:
-
-Abstraction: Abstract common functionalities into base classes, creating a streamlined and elegant interface for interaction.
-Composition: Explore the composition of luxury categories within products, highlighting the synergy of different elements within our 
-product range.
+Posh Palette deals with a wide range of luxury products, including various categories of fashion apparel. Each product belongs to a specific category, such as "indian wear," "western wear," "jewellery", "hand bags", or "accessories." Additionally, certain products may be part of limited-edition collections, warranting special attention and handling.
 
 ### Tools Used: 
-Python 
+**SQL** for querying and manipulating the inventory and sales data.
 
 ### Work Process:
-* ProductCategory Class:
+ The key tasks included tracking inventory levels, analyzing sales trends, identifying slow-moving items, calculating reorder points, and generating forecasts based on historical data.
 
-Attributes: _category_name, _sub_category_name, _product_name
-Encapsulation using property decorators and setters to control access to attributes.
-Instances are added to the category_details list.
+* **Inventory Analysis**: Determined the total number of items in stock for each product by subtracting shipped quantities from starting inventory.
+* **Supplier Relationships**: Identified products along with their respective supplier names by joining Products with Procurement and Suppliers tables.
+* **Sales Analysis**: Calculated running total sales, identified top-selling products, and ranked products based on sales volume.
+* **Profitability Analysis**: Calculated profit margins and impact on overall profitability for products.
+* **Forecasting**: Generated sales forecasts for the next quarter based on historical sales trends.
 
-* LuxuryProduct Class (Inherits from ProductCategory):
+### Recommendations
 
-Additional attributes: __price, quantity, __limited_edition, pay_rate
-Constructor validates input and calls the superclass constructor.
-Method calculate_discount applies a discount to the product price.
-Method __repr__ provides a string representation of the object.
+* **Inventory Management**: Implement a dynamic inventory replenishment strategy to maintain optimal stock levels.
+* **Sales Strategy**: Focus on promoting high-margin products and adjust pricing strategies for slow-moving items.
+* **Supplier Relations**: Strengthen relationships with key suppliers to ensure timely delivery and competitive pricing.
 
-* Class method instantiate_from_csv reads data from a CSV file, creates instances, and adds them to the product_details list.
-Usage:
-
-The script instantiates LuxuryProduct objects from a CSV file using the instantiate_from_csv class method.
-It then prints details of each product, applies a discount, and prints the updated details.
-Access to attributes is demonstrated, including the use of name-mangling for the private attribute __limited_edition.
 
 ### Conclusion: 
-In summary, the code addresses The ProductCategory and LuxuryProduct classes exemplify clean object-oriented design, incorporating encapsulation, inheritance, polymorphism and validation checks. The optimized script efficiently reads and processes data from a CSV file, demonstrating the flexibility of the classes. The result is a concise and well-structured implementation that adheres to Python best practices.
+In summary, this project demonstrated the effective use of SQL for inventory management and analysis, providing valuable insights into product performance, profitability, and sales forecasts. By leveraging these insights, businesses can make informed decisions to optimize operations and improve overall efficiency.
