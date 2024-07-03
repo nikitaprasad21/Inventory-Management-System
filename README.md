@@ -1,13 +1,9 @@
-# Inventory Management System for Posh Palette - A High-End Lifestyle Retailer
+# Inventory Management System for Posh Palette - Lifestyle Retailer
 
 ### Introduction: 
 
-As a stakeholder at Posh Palette, a prestigious lifestyle retailer known for its exclusive range of products, we are facing challenges in managing 
-our diverse inventory efficiently. The objective of this project was to implement an effective inventory management system and perform comprehensive data analysis using SQL for Posh Palette's diverse range of fashion products, aiming to reduce holding costs, prevent stockouts, and maximize revenue without losing customers. The need for an advanced Inventory Management System has become imperative to maintain the high standards of our brand and provide an exceptional shopping experience to our customers.
-
--- Products in the Inventory:
-
-Posh Palette deals with a wide range of luxury products, including various categories of fashion apparel. Each product belongs to a specific category, such as "indian wear," "western wear," "jewellery", "hand bags", or "accessories." Additionally, certain products may be part of limited-edition collections, warranting special attention and handling.
+As a stakeholder at Posh Palette, we are facing challenges in managing 
+our diverse inventory efficiently. The objective of this project was to implement an effective inventory management system and perform comprehensive data analysis using SQL for Posh Palette's diverse range of fashion products, aiming to reduce holding costs, prevent stockouts, and maximize revenue without losing customers. T
 
 ### Tools Used: 
 **SQL** for querying and manipulating the inventory and sales data.
