@@ -1,0 +1,72 @@
+Data Schema of Posh Palette DB
+
+1. Products Table
+This table holds information about the items sold by the company, including their starting inventory, minimum stock levels, and pricing.
+
+Column Name           Description                                      Data Type
+-------------------------------------------------------------------------------------
+ProductID             Unique identifier for each product (Primary Key)  INT
+ItemName              Name of the product                               VARCHAR(50)
+ItemCategory          Broad category under which the product falls      VARCHAR(50)
+ItemSubCategory       Subcategory within the main category              VARCHAR(50)
+ItemNumber            Number of units available for the product         INT
+StartingInventory     Initial inventory count for the product           INT
+MinimumRequired       Minimum stock level required before reordering    INT
+PricePerItem          Price of each product                             DECIMAL(5, 2)
+
+-------------------------------------------------------------------------------------
+
+2. Orders Table
+This table stores details related to customer orders, including the quantity of items shipped, order date, and the time taken to fulfill the order.
+
+Column Name           Description                                      Data Type
+-------------------------------------------------------------------------------------
+OrderID               Unique identifier for each order (Primary Key)    INT
+FirstName             Customer’s first name                             VARCHAR(50)
+LastName              Customer’s last name                              VARCHAR(50)
+ProductID             Reference to the ordered product (Foreign Key)    INT
+Size                  Size of the product ordered                       VARCHAR(10)
+NumberShipped         Quantity of products shipped in the order         INT
+OrderDate             Date the order was placed                         DATE
+LeadTime              Time taken to deliver the product (in days)       INT
+
+-------------------------------------------------------------------------------------
+
+3. Suppliers Table
+Contains basic details of the suppliers from whom products are procured.
+
+Column Name           Description                                      Data Type
+-------------------------------------------------------------------------------------
+SupplierID            Unique identifier for each supplier (Primary Key) INT
+SupplierName          Name of the supplier                             VARCHAR(500)
+SupplierEmail         Supplier's email (optional field)                VARCHAR(5)
+SupplierPhone         Supplier's contact phone number                  VARCHAR(10)
+
+-------------------------------------------------------------------------------------
+
+4. Procurement Table
+This table logs details of product procurement, tracking quantities received and purchase dates.
+
+Column Name           Description                                      Data Type
+-------------------------------------------------------------------------------------
+ProcurementID         Unique identifier for each procurement (Primary Key) INT
+SupplierID            Reference to the supplier (Foreign Key)           INT
+ProductID             Reference to the product procured (Foreign Key)   INT
+NumberReceived        Quantity of products received in the procurement  INT
+PurchaseDate          Date when the procurement was made                DATE
+PricePerUnit          Price per unit for the procurement                DECIMAL(5, 2)
+
+-------------------------------------------------------------------------------------
+
+5. Historical Pricing Table
+Tracks the changes in product prices over time, storing the price and the date it became effective.
+
+Column Name           Description                                      Data Type
+-------------------------------------------------------------------------------------
+HistoricalPriceID     Unique identifier for each price entry (Primary Key) INT
+ProductID             Reference to the product (Foreign Key)            INT
+Price                 Price of the product                              DECIMAL(5, 2)
+EffectiveDate         Date the price change took effect                 DATE
+
+
+  
